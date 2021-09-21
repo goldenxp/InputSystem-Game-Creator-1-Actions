@@ -18,3 +18,6 @@ This checks Input Actions that are stored in an asset. This allows for better sh
 This takes a Player Input component and routes all performed Input Actions into Game Creator Events. This way you can easily use inputs with `On Event Receive` triggers.
 
 Note: You can actually use the PlayerInput component to invoke Unity Events that can directly invoke Triggers but this class helps skip an extra step.
+
+### Switch Map Action
+Takes the provided Player Input component and lets you switch to a different Action Map (enabling the new and disabling prior set of inputs)
