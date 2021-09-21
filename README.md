@@ -15,6 +15,6 @@ This helps with quick ad-hoc hook ups like keys for testing or inputs that only 
 This checks Input Actions that are stored in an asset. This allows for better sharing and opens up other possibilities like rebinding.
 
 ### Player Input Dispatcher
-This takes a Player Input component and routes all performed Input Actions into Game Creator Events. This way you can easily use `On Invoke` triggers.
+This takes a Player Input component and routes all performed Input Actions into Game Creator Events. This way you can easily use inputs with `On Event Receive` triggers.
 
 Note: You can actually use the PlayerInput component to invoke Unity Events that can directly invoke Triggers but this class helps skip an extra step.
