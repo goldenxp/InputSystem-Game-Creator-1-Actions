@@ -13,10 +13,25 @@
 		
 		public InputActionReference actionRef;
 		public bool negate;
+		public PlayerInput playerInput;
 
 		private void Update()
 		{
-			if (negate ^ actionRef.action.triggered)
+			bool inputTriggered = negate;
+			if (playerInput != null)
+			{
+				InputAction activeAction = playerInput.currentActionMap.FindAction(actionRef.action.id);
+				if (activeAction != null)
+				{
+					inputTriggered = activeAction.triggered;
+				}
+			}
+			else
+			{
+				inputTriggered = actionRef.action.triggered;
+			}
+			
+			if (negate ^ inputTriggered)
 			{
 				this.ExecuteTrigger(gameObject);
 			}
